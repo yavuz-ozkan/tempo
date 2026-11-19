@@ -1,6 +1,6 @@
 # Tempo
 
-![Tempo dashboard: PR lead time by week and the lead-time distribution](docs/screenshot.png)
+![Tempo dashboard scrolling through its five charts](docs/demo.gif)
 
 *The dashboard running on its built-in mock data (`npm run dev:mock`); every number shown is synthetic.*
 
