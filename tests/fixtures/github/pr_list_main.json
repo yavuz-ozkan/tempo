@@ -1,0 +1,245 @@
+{
+  "data": {
+    "rateLimit": { "cost": 1 },
+    "repository": {
+      "pullRequests": {
+        "pageInfo": { "hasNextPage": false, "endCursor": "MAIN_END" },
+        "nodes": [
+          {
+            "databaseId": 101001,
+            "fullDatabaseId": "101001",
+            "number": 101,
+            "title": "Add caching layer",
+            "body": "Straightforward change.",
+            "isDraft": false,
+            "createdAt": "2026-07-01T09:00:00Z",
+            "mergedAt": "2026-07-03T15:30:00Z",
+            "updatedAt": "2026-07-07T00:00:00Z",
+            "additions": 40,
+            "deletions": 5,
+            "changedFiles": 3,
+            "author": { "login": "alice" },
+            "reviews": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": [
+                {
+                  "databaseId": 5001,
+                  "fullDatabaseId": "5001",
+                  "author": { "login": "bob" },
+                  "submittedAt": "2026-07-02T10:00:00Z",
+                  "state": "APPROVED"
+                },
+                {
+                  "databaseId": 5002,
+                  "fullDatabaseId": "5002",
+                  "author": { "login": "carol" },
+                  "submittedAt": null,
+                  "state": "PENDING"
+                }
+              ]
+            },
+            "commits": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": [
+                {
+                  "commit": {
+                    "oid": "aaa1110000000000000000000000000000000000",
+                    "authoredDate": "2026-07-01T08:30:00Z",
+                    "message": "Add caching layer"
+                  }
+                }
+              ]
+            },
+            "timelineItems": { "nodes": [] }
+          },
+          {
+            "databaseId": 102002,
+            "fullDatabaseId": "102002",
+            "number": 102,
+            "title": "WIP: refactor auth",
+            "body": "",
+            "isDraft": true,
+            "createdAt": "2026-07-01T08:00:00Z",
+            "mergedAt": "2026-07-04T12:00:00Z",
+            "updatedAt": "2026-07-07T00:00:00Z",
+            "additions": 120,
+            "deletions": 30,
+            "changedFiles": 8,
+            "author": { "login": "alice" },
+            "reviews": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": []
+            },
+            "commits": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": [
+                {
+                  "commit": {
+                    "oid": "bbb2220000000000000000000000000000000000",
+                    "authoredDate": "2026-07-01T07:00:00Z",
+                    "message": "refactor auth internals"
+                  }
+                }
+              ]
+            },
+            "timelineItems": {
+              "nodes": [
+                { "__typename": "ReadyForReviewEvent", "createdAt": "2026-07-01T10:00:00Z" }
+              ]
+            }
+          },
+          {
+            "databaseId": 103003,
+            "fullDatabaseId": "103003",
+            "number": 103,
+            "title": "Revert \"Add caching layer\"",
+            "body": "This PR undoes the caching change.",
+            "isDraft": false,
+            "createdAt": "2026-07-02T09:00:00Z",
+            "mergedAt": "2026-07-02T10:00:00Z",
+            "updatedAt": "2026-07-07T00:00:00Z",
+            "additions": 5,
+            "deletions": 40,
+            "changedFiles": 3,
+            "author": { "login": "bob" },
+            "reviews": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": []
+            },
+            "commits": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": [
+                {
+                  "commit": {
+                    "oid": "ccc3330000000000000000000000000000000000",
+                    "authoredDate": "2026-07-02T08:55:00Z",
+                    "message": "Undo caching layer"
+                  }
+                }
+              ]
+            },
+            "timelineItems": { "nodes": [] }
+          },
+          {
+            "databaseId": 104004,
+            "fullDatabaseId": "104004",
+            "number": 104,
+            "title": "Fix broken build",
+            "body": "",
+            "isDraft": false,
+            "createdAt": "2026-07-02T11:00:00Z",
+            "mergedAt": "2026-07-02T12:00:00Z",
+            "updatedAt": "2026-07-07T00:00:00Z",
+            "additions": 3,
+            "deletions": 60,
+            "changedFiles": 2,
+            "author": { "login": "carol" },
+            "reviews": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": []
+            },
+            "commits": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": [
+                {
+                  "commit": {
+                    "oid": "ddd4440000000000000000000000000000000000",
+                    "authoredDate": "2026-07-02T10:50:00Z",
+                    "message": "Fix broken build\n\nThis reverts commit ccc3330000000000000000000000000000000000."
+                  }
+                }
+              ]
+            },
+            "timelineItems": { "nodes": [] }
+          },
+          {
+            "databaseId": 105005,
+            "fullDatabaseId": "105005",
+            "number": 105,
+            "title": "Bump dependency",
+            "body": "",
+            "isDraft": false,
+            "createdAt": "2026-07-03T09:00:00Z",
+            "mergedAt": "2026-07-03T10:00:00Z",
+            "updatedAt": "2026-07-07T00:00:00Z",
+            "additions": 1,
+            "deletions": 1,
+            "changedFiles": 1,
+            "author": null,
+            "reviews": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": []
+            },
+            "commits": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": [
+                {
+                  "commit": {
+                    "oid": "eee5550000000000000000000000000000000000",
+                    "authoredDate": "2026-07-03T08:00:00Z",
+                    "message": "Bump dependency to 2.1.0"
+                  }
+                }
+              ]
+            },
+            "timelineItems": { "nodes": [] }
+          },
+          {
+            "databaseId": 106006,
+            "fullDatabaseId": "106006",
+            "number": 106,
+            "title": "Big feature",
+            "body": "",
+            "isDraft": false,
+            "createdAt": "2026-06-20T09:00:00Z",
+            "mergedAt": "2026-07-05T18:00:00Z",
+            "updatedAt": "2026-07-07T00:00:00Z",
+            "additions": 500,
+            "deletions": 100,
+            "changedFiles": 20,
+            "author": { "login": "alice" },
+            "reviews": {
+              "pageInfo": { "hasNextPage": true, "endCursor": "RC1" },
+              "nodes": [
+                {
+                  "databaseId": 6001,
+                  "fullDatabaseId": "6001",
+                  "author": { "login": "bob" },
+                  "submittedAt": "2026-06-25T10:00:00Z",
+                  "state": "COMMENTED"
+                },
+                {
+                  "databaseId": 6002,
+                  "fullDatabaseId": "6002",
+                  "author": { "login": "carol" },
+                  "submittedAt": "2026-06-26T11:00:00Z",
+                  "state": "CHANGES_REQUESTED"
+                }
+              ]
+            },
+            "commits": {
+              "pageInfo": { "hasNextPage": true, "endCursor": "CC1" },
+              "nodes": [
+                {
+                  "commit": {
+                    "oid": "fff6010000000000000000000000000000000000",
+                    "authoredDate": "2026-06-22T09:00:00Z",
+                    "message": "part 1"
+                  }
+                },
+                {
+                  "commit": {
+                    "oid": "fff6020000000000000000000000000000000000",
+                    "authoredDate": "2026-06-23T09:00:00Z",
+                    "message": "part 2"
+                  }
+                }
+              ]
+            },
+            "timelineItems": { "nodes": [] }
+          }
+        ]
+      }
+    }
+  }
+}

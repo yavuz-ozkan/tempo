@@ -1,0 +1,21 @@
+{
+  "data": {
+    "rateLimit": { "cost": 1 },
+    "repository": {
+      "pullRequest": {
+        "commits": {
+          "pageInfo": { "hasNextPage": false, "endCursor": null },
+          "nodes": [
+            {
+              "commit": {
+                "oid": "fff6030000000000000000000000000000000000",
+                "authoredDate": "2026-06-19T08:00:00Z",
+                "message": "part 0 (earliest commit, on a later page)"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "resourceMetrics": [
+    {
+      "resource": {
+        "attributes": [
+          {"key": "repo", "value": {"stringValue": "example/repo"}},
+          {"key": "team.id", "value": {"stringValue": "core"}},
+          {"key": "service.name", "value": {"stringValue": "claude-code"}}
+        ]
+      },
+      "scopeMetrics": [
+        {
+          "scope": {"name": "com.anthropic.claude_code"},
+          "metrics": [
+            {
+              "name": "claude_code.token.usage",
+              "unit": "tokens",
+              "sum": {
+                "isMonotonic": true,
+                "aggregationTemporality": 1,
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {"key": "type", "value": {"stringValue": "input"}},
+                      {"key": "model", "value": {"stringValue": "claude-sonnet-5"}}
+                    ],
+                    "timeUnixNano": "1751803200000000000",
+                    "asInt": "100"
+                  },
+                  {
+                    "attributes": [
+                      {"key": "type", "value": {"stringValue": "output"}},
+                      {"key": "model", "value": {"stringValue": "claude-sonnet-5"}}
+                    ],
+                    "timeUnixNano": "1751803200000000000",
+                    "asInt": "40"
+                  },
+                  {
+                    "attributes": [
+                      {"key": "type", "value": {"stringValue": "cacheRead"}},
+                      {"key": "model", "value": {"stringValue": "claude-sonnet-5"}}
+                    ],
+                    "timeUnixNano": "1751803200000000000",
+                    "asInt": "9000"
+                  },
+                  {
+                    "attributes": [
+                      {"key": "type", "value": {"stringValue": "cacheCreation"}},
+                      {"key": "model", "value": {"stringValue": "claude-sonnet-5"}}
+                    ],
+                    "timeUnixNano": "1751803200000000000",
+                    "asInt": "500"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "claude_code.cost.usage",
+              "unit": "USD",
+              "sum": {
+                "isMonotonic": true,
+                "aggregationTemporality": 1,
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {"key": "model", "value": {"stringValue": "claude-sonnet-5"}}
+                    ],
+                    "timeUnixNano": "1751803200000000000",
+                    "asDouble": 1.25
+                  }
+                ]
+              }
+            },
+            {
+              "name": "claude_code.session.count",
+              "unit": "count",
+              "sum": {
+                "isMonotonic": true,
+                "aggregationTemporality": 1,
+                "dataPoints": [
+                  {
+                    "attributes": [],
+                    "timeUnixNano": "1751803200000000000",
+                    "asInt": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "claude_code.lines_of_code.count",
+              "unit": "count",
+              "sum": {
+                "isMonotonic": true,
+                "aggregationTemporality": 1,
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {"key": "type", "value": {"stringValue": "added"}}
+                    ],
+                    "timeUnixNano": "1751803200000000000",
+                    "asInt": "1234"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

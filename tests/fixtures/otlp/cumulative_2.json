@@ -1,0 +1,56 @@
+{
+  "resourceMetrics": [
+    {
+      "resource": {
+        "attributes": [
+          {"key": "repo", "value": {"stringValue": "example/repo"}},
+          {"key": "team.id", "value": {"stringValue": "core"}}
+        ]
+      },
+      "scopeMetrics": [
+        {
+          "scope": {"name": "com.anthropic.claude_code"},
+          "metrics": [
+            {
+              "name": "claude_code.token.usage",
+              "unit": "tokens",
+              "sum": {
+                "isMonotonic": true,
+                "aggregationTemporality": "AGGREGATION_TEMPORALITY_CUMULATIVE",
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {"key": "type", "value": {"stringValue": "input"}},
+                      {"key": "model", "value": {"stringValue": "claude-sonnet-5"}}
+                    ],
+                    "startTimeUnixNano": "1751800000000000000",
+                    "timeUnixNano": "1751803200000000000",
+                    "asInt": "250"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "claude_code.cost.usage",
+              "unit": "USD",
+              "sum": {
+                "isMonotonic": true,
+                "aggregationTemporality": "AGGREGATION_TEMPORALITY_CUMULATIVE",
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {"key": "model", "value": {"stringValue": "claude-sonnet-5"}}
+                    ],
+                    "startTimeUnixNano": "1751803210000000000",
+                    "timeUnixNano": "1751803200000000000",
+                    "asDouble": 1.0
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

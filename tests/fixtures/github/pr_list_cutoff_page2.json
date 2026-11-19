@@ -1,0 +1,40 @@
+{
+  "data": {
+    "rateLimit": { "cost": 1 },
+    "repository": {
+      "pullRequests": {
+        "pageInfo": { "hasNextPage": true, "endCursor": "P2" },
+        "nodes": [
+          {
+            "databaseId": 203, "fullDatabaseId": "203", "number": 203,
+            "title": "Old change three", "body": "", "isDraft": false,
+            "createdAt": "2026-06-30T09:00:00Z", "mergedAt": "2026-06-30T11:00:00Z",
+            "updatedAt": "2026-07-01T00:00:00Z",
+            "additions": 5, "deletions": 1, "changedFiles": 1,
+            "author": { "login": "carol" },
+            "reviews": { "pageInfo": { "hasNextPage": false, "endCursor": null }, "nodes": [] },
+            "commits": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": [ { "commit": { "oid": "a203", "authoredDate": "2026-06-30T08:00:00Z", "message": "three" } } ]
+            },
+            "timelineItems": { "nodes": [] }
+          },
+          {
+            "databaseId": 204, "fullDatabaseId": "204", "number": 204,
+            "title": "Older change four", "body": "", "isDraft": false,
+            "createdAt": "2026-06-01T09:00:00Z", "mergedAt": "2026-06-01T11:00:00Z",
+            "updatedAt": "2026-06-01T00:00:00Z",
+            "additions": 8, "deletions": 4, "changedFiles": 2,
+            "author": { "login": "alice" },
+            "reviews": { "pageInfo": { "hasNextPage": false, "endCursor": null }, "nodes": [] },
+            "commits": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": [ { "commit": { "oid": "a204", "authoredDate": "2026-06-01T08:00:00Z", "message": "four" } } ]
+            },
+            "timelineItems": { "nodes": [] }
+          }
+        ]
+      }
+    }
+  }
+}

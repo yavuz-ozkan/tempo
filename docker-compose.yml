@@ -1,0 +1,43 @@
+# Tempo deployment: Postgres + the API/receiver.
+# The server runs this behind the tailnet/VPN --- the OTLP receiver on 8010
+# is NEVER exposed publicly. Nightly collectors/jobs are host cron
+# invocations of the `tempo` CLI:
+#
+#   docker compose run --rm api tempo sync-github --backfill-months 12
+#   docker compose run --rm api tempo rework
+#   docker compose run --rm api tempo rollup
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: tempo
+      POSTGRES_PASSWORD: tempo
+      POSTGRES_DB: tempo
+    ports:
+      # Host 5433 -> container 5432 (matches the local dev DSN default).
+      - "5433:5432"
+    volumes:
+      - tempo_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tempo -d tempo"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: .
+    environment:
+      # In-network the DB is reachable as host `db` on the container port 5432.
+      TEMPO_DATABASE_URL: postgresql://tempo:tempo@db:5432/tempo
+      TEMPO_AUTHOR_SALT: ${TEMPO_AUTHOR_SALT:?set a real random salt in .env - a public default defeats pseudonymization}
+      TEMPO_OTLP_TOKEN: ${TEMPO_OTLP_TOKEN:-}
+      TEMPO_ORG_UNIT: ${TEMPO_ORG_UNIT:-default}
+    ports:
+      - "8010:8010"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  tempo_pgdata:

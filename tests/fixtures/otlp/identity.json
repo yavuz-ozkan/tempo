@@ -1,0 +1,44 @@
+{
+  "resourceMetrics": [
+    {
+      "resource": {
+        "attributes": [
+          {"key": "repo", "value": {"stringValue": "example/repo"}},
+          {"key": "team.id", "value": {"stringValue": "core"}},
+          {"key": "user.id", "value": {"stringValue": "u-SECRET-9"}},
+          {"key": "user.email", "value": {"stringValue": "secret@example.com"}}
+        ]
+      },
+      "scopeMetrics": [
+        {
+          "scope": {"name": "com.anthropic.claude_code"},
+          "metrics": [
+            {
+              "name": "claude_code.token.usage",
+              "unit": "tokens",
+              "sum": {
+                "isMonotonic": true,
+                "aggregationTemporality": 1,
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {"key": "type", "value": {"stringValue": "input"}},
+                      {"key": "model", "value": {"stringValue": "claude-sonnet-5"}},
+                      {"key": "user.id", "value": {"stringValue": "u-SECRET-9"}},
+                      {"key": "user.email", "value": {"stringValue": "secret@example.com"}},
+                      {"key": "user.account_uuid", "value": {"stringValue": "acct-SECRET-5"}},
+                      {"key": "session.id", "value": {"stringValue": "sess-SECRET-7"}},
+                      {"key": "organization.id", "value": {"stringValue": "org-SECRET-3"}}
+                    ],
+                    "timeUnixNano": "1751803200000000000",
+                    "asInt": "10"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

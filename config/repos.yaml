@@ -1,0 +1,9 @@
+# Tracked repos. `slug` is the `repo` value in every table.
+# clone_path is where the rework blame job keeps its bare clone (git-ignored).
+repos:
+  - slug: pallets/flask
+    git_url: https://github.com/pallets/flask.git
+    clone_path: .clones/flask.git
+  - slug: astral-sh/uv
+    git_url: https://github.com/astral-sh/uv.git
+    clone_path: .clones/uv.git

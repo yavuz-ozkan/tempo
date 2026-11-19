@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/*
+ * Dark, restrained palette. UI chrome tokens live here (so they
+ * are usable as Tailwind utilities like bg-panel / text-muted); chart series
+ * colours live in src/lib/chartTheme.ts. The `--color-*` names become
+ * utilities automatically under Tailwind v4.
+ */
+@theme {
+  --color-ink: #0a0d13; /* app background */
+  --color-panel: #111621; /* card surface */
+  --color-panel-2: #161c28; /* inputs / nested surface */
+  --color-edge: #232b3a; /* card + control borders */
+  --color-edge-soft: #1b2230; /* hairline dividers */
+
+  --color-fg: #e7eaf0; /* primary text */
+  --color-muted: #9aa3b5; /* secondary text */
+  --color-faint: #626c80; /* footnotes, axis labels */
+
+  --color-p50: #38bdf8; /* accent (matches the median line) */
+  --color-mask: #f59e0b; /* insufficient-n accent */
+  --color-rework: #fb7185; /* error / defect accent */
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-ink);
+  color: var(--color-fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Recharts injects inline SVG; keep focus outlines from the default reset off
+   the chart surfaces while preserving them on real controls. */
+.recharts-wrapper:focus,
+.recharts-surface:focus {
+  outline: none;
+}
